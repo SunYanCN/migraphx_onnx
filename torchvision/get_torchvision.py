@@ -164,7 +164,7 @@ def vgg():
 resnet()
 inception()
 # squeezenet gives me errors when trying to export
-squeezenet()
+#squeezenet()
 alexnet()
 densenet()
 vgg()
