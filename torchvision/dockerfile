@@ -1,0 +1,11 @@
+# Install pytorch 0.4.0
+# Ecosystem to run pytorch 0.4.0 as required to create ONNX files
+#
+FROM ubuntu:16.04
+ENV PATH "/root/anaconda3/bin:$PATH"
+RUN apt update && apt install -y wget curl bzip2 qv4l2 pkg-config libgtk2.0-dev
+RUN curl -O https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+RUN bash ./Anaconda3-5.0.1-Linux-x86_64.sh -b
+RUN /root/anaconda3/bin/conda install -y pytorch=0.4.0 -c pytorch
+RUN /root/anaconda3/bin/conda install -y torchvision
+RUN /root/anaconda3/bin/conda install -y opencv
