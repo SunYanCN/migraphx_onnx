@@ -18,7 +18,7 @@ def fbresnet152(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0
 
 def bninception(name,fname,batch):
@@ -27,7 +27,7 @@ def bninception(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0
 
 def resnext101_32x4d(name,fname,batch):
@@ -36,7 +36,7 @@ def resnext101_32x4d(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0
 
 def resnext101_64x4d(name,fname,batch):
@@ -45,7 +45,7 @@ def resnext101_64x4d(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
 
 def inceptionv4(name,fname,batch):
@@ -54,7 +54,7 @@ def inceptionv4(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,299,299),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def inceptionresnetv2(name,fname,batch):
@@ -63,7 +63,7 @@ def inceptionresnetv2(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,299,299),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def alexnet(name,fname,batch):
@@ -72,7 +72,7 @@ def alexnet(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def densenet121(name,fname,batch):
@@ -81,7 +81,7 @@ def densenet121(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def densenet169(name,fname,batch):
@@ -90,7 +90,7 @@ def densenet169(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def densenet201(name,fname,batch):
@@ -99,7 +99,7 @@ def densenet201(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def densenet161(name,fname,batch):
@@ -108,7 +108,7 @@ def densenet161(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
 
 def resnet18(name,fname,batch):
@@ -117,7 +117,7 @@ def resnet18(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def resnet34(name,fname,batch):
@@ -126,7 +126,7 @@ def resnet34(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def resnet50(name,fname,batch):
@@ -135,7 +135,7 @@ def resnet50(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def resnet101(name,fname,batch):
@@ -144,7 +144,7 @@ def resnet101(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def resnet152(name,fname,batch):
@@ -153,7 +153,7 @@ def resnet152(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def inceptionv3(name,fname,batch):
@@ -162,7 +162,7 @@ def inceptionv3(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,299,299),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def squeezenet1_0(name,fname,batch):
@@ -171,7 +171,7 @@ def squeezenet1_0(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def squeezenet1_1(name,fname,batch):
@@ -180,7 +180,7 @@ def squeezenet1_1(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def vgg11(name,fname,batch):
@@ -189,7 +189,7 @@ def vgg11(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def vgg11_bn(name,fname,batch):
@@ -198,7 +198,7 @@ def vgg11_bn(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def vgg13(name,fname,batch):
@@ -207,7 +207,7 @@ def vgg13(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def vgg13_bn(name,fname,batch):
@@ -216,7 +216,7 @@ def vgg13_bn(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def vgg16(name,fname,batch):
@@ -225,7 +225,7 @@ def vgg16(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def vgg16_bn(name,fname,batch):
@@ -234,7 +234,7 @@ def vgg16_bn(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def vgg19_bn(name,fname,batch):
@@ -243,7 +243,7 @@ def vgg19_bn(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def vgg19(name,fname,batch):
@@ -252,7 +252,7 @@ def vgg19(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def nasnetamobile(name,fname,batch):
@@ -261,7 +261,7 @@ def nasnetamobile(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def nasnetalarge(name,fname,batch):
@@ -270,7 +270,7 @@ def nasnetalarge(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,331,331),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def dpn68(name,fname,batch):
@@ -279,7 +279,7 @@ def dpn68(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def dpn68b(name,fname,batch):
@@ -288,7 +288,7 @@ def dpn68b(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet+5k')    
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def dpn92(name,fname,batch):
@@ -297,7 +297,7 @@ def dpn92(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet+5k')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def dpn98(name,fname,batch):
@@ -306,7 +306,7 @@ def dpn98(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def dpn131(name,fname,batch):
@@ -315,7 +315,7 @@ def dpn131(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def dpn107(name,fname,batch):
@@ -324,7 +324,7 @@ def dpn107(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet+5k')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def xception(name,fname,batch):
@@ -333,7 +333,7 @@ def xception(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,299,299),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0
     
 def senet154(name,fname,batch):
@@ -342,7 +342,7 @@ def senet154(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def se_resnet50(name,fname,batch):
@@ -351,7 +351,7 @@ def se_resnet50(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def se_resnet101(name,fname,batch):
@@ -360,7 +360,7 @@ def se_resnet101(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def se_resnet152(name,fname,batch):
@@ -369,7 +369,7 @@ def se_resnet152(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def se_resnext50_32x4d(name,fname,batch):
@@ -378,7 +378,7 @@ def se_resnext50_32x4d(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def se_resnext101_32x4d(name,fname,batch):
@@ -387,7 +387,7 @@ def se_resnext101_32x4d(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def cafferesnet101(name,fname,batch):
@@ -396,7 +396,7 @@ def cafferesnet101(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,224,224),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def pnasnet5large(name,fname,batch):
@@ -405,7 +405,7 @@ def pnasnet5large(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,331,331),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
     
 def polynet(name,fname,batch):
@@ -414,7 +414,7 @@ def polynet(name,fname,batch):
     print(fname)
     model = pretrainedmodels.__dict__[name](num_classes=1000,pretrained='imagenet')
     model.eval()
-    torch.onnx.export(model,torch.randn(batch,3,331,331),filename)
+    torch.onnx.export(model,torch.randn(batch,model.input_size[0],model.input_size[1],model.input_size[2]),filename)
     return 0    
 
 for batch in 1,2,4,8,16,32,64,128,256:
