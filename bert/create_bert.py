@@ -7,7 +7,7 @@
 #       are inserted at appropriate spots in the training scripts.
 
 import torch
-from pytorch_pretrained_bert import BertModel, BertForMaskedLM, BertForNextSentencePrediction, BertForPreTraining, BertForSequenceClassification, BertForMultipleChoice, BertForTokenClassification
+from pytorch_pretrained_bert import BertModel, BertForMaskedLM, BertForNextSentencePrediction, BertForPreTraining, BertForSequenceClassification, BertForMultipleChoice, BertForTokenClassification, BertForQuestionAnswering
 import argparse
 
 def main():
@@ -48,8 +48,10 @@ def main():
     model = BertForTokenClassification.from_pretrained(args.bert_model,2)
     torch.onnx.export(model,(input_ids,token_type_ids),'bert_tokenclassify_'+'batch'+str(args.batch_size)+'_'+args.bert_model+'.untrained.onnx')
 
-    model = BertForQuestionAnswering.from_pretrained(args.bert_model,2)
-    torch.onnx.export(model,(input_ids,token_type_ids),'bert_question_'+'batch'+str(args.batch_size)+'_'+args.bert_model+'.untrained.onnx')    
+    # Returns error on ONNX export about "squeeze with negative axis -1 might cause onnx model to be incorrect, so commented out.
+    #
+    # model = BertForQuestionAnswering.from_pretrained(args.bert_model)
+    # torch.onnx.export(model,(input_ids,token_type_ids),'bert_question_'+'batch'+str(args.batch_size)+'_'+args.bert_model+'.untrained.onnx')    
 
     choices=2
     input_ids = torch.zeros([args.batch_size,choices,args.max_seq_length],dtype=torch.long)
