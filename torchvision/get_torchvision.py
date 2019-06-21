@@ -78,7 +78,7 @@ def squeezenet():
     squeezenet11()
 
 def alexnet():
-    alexnet = models.alexnet()
+    alexnet = models.alexnet(pretrained=True)
     alexnet.eval()
     for batch in 1,2,4,8,16,32,64,128,256:
         filename='alexneti'+str(batch)+'.onnx'
@@ -161,10 +161,10 @@ def vgg():
     vgg16()
     vgg19()
 
-resnet()
-inception()
+#resnet()
+#inception()
 # squeezenet gives me errors when trying to export
 #squeezenet()
 alexnet()
-densenet()
-vgg()
+#densenet()
+#vgg()

@@ -8,7 +8,7 @@ import pretrainedmodels
 import sys
 import os.path
 # set the directory where torch models are cached, e.g. outside the docker container
-#os.environ['TORCH_MODEL_ZOO'] = '/home/mev/.torch'
+os.environ['TORCH_MODEL_ZOO'] = '/home/mev/.torch'
 batch_size = 1
 regenerate = False   # re-create files even if they exist
 
